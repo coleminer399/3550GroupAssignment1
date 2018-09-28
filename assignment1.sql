@@ -9,7 +9,6 @@ CREATE TABLE Manufacturer (
     ManufacturerName varchar(255)
 );
 
-<<<<<<< HEAD
 INSERT @Manufacturer (ManufacturerID, ManufacturerName) VALUES ('1','Sony')
 INSERT @Manufacturer (ManufacturerID, ManufacturerName) VALUES ('2','Nintendo')
 INSERT @Manufacturer (ManufacturerID, ManufacturerName) VALUES ('3','Microsoft')
@@ -40,5 +39,3 @@ INSERT @Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('519','2','Nint
 INSERT @Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('520','2','Nintendo 3DS')
 INSERT @Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('521','2','Nintendo Entertainment System')
 INSERT @Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('522','2','Nintendo 64')
-=======
->>>>>>> master
