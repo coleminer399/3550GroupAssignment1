@@ -13,9 +13,10 @@ CREATE TABLE Console (
 
 CREATE TABLE ESRB(
 	ESRB_ID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	ESRB_Name char (5) NOT NULL
+	ESRB varchar (5) NOT NULL
 )
-
+alter table esrb
+alter column esrb varchar(5)
 
 CREATE TABLE Genre(
 	GenreID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
@@ -89,11 +90,11 @@ SET IDENTITY_INSERT dbo.Console OFF;
 
 
 SET IDENTITY_INSERT dbo.ESRB ON;
-INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('1','E')
-INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('2','E 10+')
-INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('3','T')
-INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('4','M')
-INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('5','KA')
+INSERT ESRB(ESRB_ID, ESRB) VALUES ('1','E')
+INSERT ESRB(ESRB_ID, ESRB) VALUES ('2','E 10+')
+INSERT ESRB(ESRB_ID, ESRB) VALUES ('3','T')
+INSERT ESRB(ESRB_ID, ESRB) VALUES ('4','M')
+INSERT ESRB(ESRB_ID, ESRB) VALUES ('5','KA')
 SET IDENTITY_INSERT dbo.ESRB OFF;
 
 
@@ -147,7 +148,7 @@ INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Mario Kart Wii',1,
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Left 4 Dead',4,1,1)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls: Arena',4,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls II: Daggerfall',4,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls III: Marrowind',4,0,0)
+INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls III: Morrowind',4,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls IV: Oblivion',4,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls V: Skyrim',4,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls Online',4,1,1)
@@ -167,32 +168,58 @@ INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Civilizations',2,1
 
 
 
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','1')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','2')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','3')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','4')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','5')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','6')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','7')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','8')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','9')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','10')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','11')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','12')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','13')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','14')
+INSERT GamesGenre (GenreID, GameID) VALUES ('9','15')
+INSERT GamesGenre (GenreID, GameID) VALUES ('7','16')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','17')
+INSERT GamesGenre (GenreID, GameID) VALUES ('9','17')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','18')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','19')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','20')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','21')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','22')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','23')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','24')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','25')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','26')
+INSERT GamesGenre (GenreID, GameID) VALUES ('8','27')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','28')
+INSERT GamesGenre (GenreID, GameID) VALUES ('12','29')
+INSERT GamesGenre (GenreID, GameID) VALUES ('12','30')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','31')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','32')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','33')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','34')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','35')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','36')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','37')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','38')
+INSERT GamesGenre (GenreID, GameID) VALUES ('4','39')
+INSERT GamesGenre (GenreID, GameID) VALUES ('7','40')
+INSERT GamesGenre (GenreID, GameID) VALUES ('7','41')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','42')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','43')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','44')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','45')
+INSERT GamesGenre (GenreID, GameID) VALUES ('7','46')
+INSERT GamesGenre (GenreID, GameID) VALUES ('7','47')
+INSERT GamesGenre (GenreID, GameID) VALUES ('1','48')
+INSERT GamesGenre (GenreID, GameID) VALUES ('12','49')
+INSERT GamesGenre (GenreID, GameID) VALUES ('3','50')
 
 
 
-select * from dbo.Console;
-select * from dbo.ESRB;
-select * from dbo.Games;
-select * from dbo.Genre;
---select * from dbo.GamesGenre;
-select * from dbo.Manufacturer;
---for testing and dropping tables
-/*
-DROP TABLE DBO.Console;
-DROP TABLE DBO.Manufacturer;
-DROP TABLE DBO.Genre;
-DROP TABLE DBO.Games;
-DROP TABLE DBO.ESRB;
-DROP TABLE DBO.GamesGenre;
-
-select 
-	ci.consoleid, 
-	ci.consolename, 
-    mi.manufacturername 
-from dbo.console ci
-left join dbo.manufacturer mi on mi.MANUFACTURERID = CI.MANUFACTURERID
-
-
-
-select * from dbo.manufacturer
-*/
+/* Question 1 Bring back all of the consoles */
