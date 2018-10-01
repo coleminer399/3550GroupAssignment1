@@ -1,0 +1,51 @@
+GameName, ESRB_ID,Multiplayer,IsOnline
+'Final Fantasy I',2,0,0
+'Final Fantasy II',3,0,0
+'Final Fantasy III',1,0,0
+'Final Fantasy IV',2,0,0
+'Final Fantasy V',3,0,0
+'Final Fantasy VI',2,0,0
+'Final Fantasy VII',3,0,0
+'Final Fantasy VIII',3,0,0
+'Final FantasyIX',3,0,0
+'Final Fantasy X',3,0,0
+'Final Fantasy XI',3,0,0
+'Final Fantasy XII',3,0,0
+'Final Fantasy XIV',3,0,1
+'Final Fantasy XV',3,0,0
+'Missile Command',1,0,0
+'Crash Bandicoot',5,0,0
+'Star Wars Battlefront',3,1,0
+'Halo: Combat Evolved',4,1,1
+'Halo 2',4,1,1
+'Halo 3',4,1,1
+'Halo 3: ODST',4,1,1
+'Halo Reach',4,1,1
+'Halo 4',4,1,1
+'Halo 5: Guardians',3,1,1
+'Halo Wars',3,1,1
+'Halo Wars 2',3,1,1
+'Guitar Hero: On Tour',2,1,0
+'Monster Hunter World',3,1,1
+'Mario Kart 64',1,1,0
+'Mario Kart Wii',1,1,1
+'Left 4 Dead',4,1,1
+'Elder Scrolls: Arena',4,0,0
+'Elder Scrolls II: Daggerfall',4,0,0
+'Elder Scrolls III: Marrowind',4,0,0
+'Elder Scrolls IV: Oblivion',4,0,0
+'Elder Scrolls V: Skyrim',4,0,0
+'Elder Scrolls Online',4,1,1
+'Destiny',3,1,1
+'Destiny 2',3,1,1
+'Super Smash Bros. Brawl',3,1,1
+'Sonic The Hedgehog',1,1,0
+'Legend of Zelda',1,0,0
+'Legend of Zelda: Ocarina of Time',1,0,0
+'Legend of Zelda: Majoras Mask',1,0,0
+'Legend of Zelda Links Awakening',1,0,0
+'Donkey Kong 64',1,1,0
+'Mario 64',1,0,0
+'Last of Us',4,1,1
+'Crazy Taxi',3,0,0
+'Civilizations',2,1,1
