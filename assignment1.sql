@@ -4,42 +4,53 @@ CREATE TABLE Manufacturer (
 );
 
 CREATE TABLE Console (
- ConsoleID int IDENTITY (500,1) PRIMARY KEY NOT NULL,
- ManufacturerID int,
- ConsoleName varchar (255),
- FOREIGN KEY (ManufacturerID) REFERENCES Manufacturer (ManufacturerID)
+	ConsoleID int IDENTITY (500,1) PRIMARY KEY NOT NULL,
+	ManufacturerID int,
+	ConsoleName varchar (255),
+	FOREIGN KEY (ManufacturerID) REFERENCES Manufacturer (ManufacturerID)
 );
 
 
 CREATE TABLE ESRB(
- ESRB_ID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
- ESRB varchar (255) NOT NULL
+	ESRB_ID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	ESRB char (4) NOT NULL
 )
 
 
 CREATE TABLE Genre(
- GenreID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
- GenreName varchar (255) NOT NULL
+	GenreID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	GenreName varchar (255) NOT NULL
 )
 
 
 
 CREATE TABLE Games(
- GameID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
- GameName varchar (255),
- ESRB_ID int NOT NULL,
- Multiplayer bit NOT NULL,
- IsOnline bit NOT NULL,
- FOREIGN KEY (ESRB_ID) REFERENCES ESRB(ESRB_ID)
+	GameID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	GameName varchar (255),
+	ESRB_ID int NOT NULL,
+	Multiplayer bit NOT NULL,
+	IsOnline bit NOT NULL,
+	FOREIGN KEY (ESRB_ID) REFERENCES ESRB(ESRB_ID)
 )
 
 CREATE TABLE GamesGenre(
- GameGenreID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
- GenreID int,
- GameID int,
-FOREIGN KEY (GenreID) REFERENCES Genre (GenreID),
-FOREIGN KEY (GameID) REFERENCES Games (GameID),
+	GameGenreID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	GenreID int,
+	GameID int,
+	FOREIGN KEY (GenreID) REFERENCES Genre (GenreID),
+	FOREIGN KEY (GameID) REFERENCES Games (GameID),
+)
 
+CREATE TABLE GameCatalogue(
+	CatalogueID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	GameID int,
+	ConsoleID int,
+	ESRB_ID int,
+	PurchaseDate date NOT NULL,
+	Collectable bit DEFAULT 0,
+	FOREIGN KEY (GameID) REFERENCES Games(GameID),
+	FOREIGN KEY (ConsoleID) REFERENCES Console(ConsoleID),
+	FOREIGN KEY (ESRB_ID) REFERENCES ESRB(ESRB_ID)
 )
 
 SET IDENTITY_INSERT dbo.Manufacturer ON;
@@ -49,6 +60,8 @@ INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('3','Microsoft')
 INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('4','Sega')
 INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('5','Atari')
 INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('6','Bandai')
+SET IDENTITY_INSERT dbo.Manufacturer OFF;
+
 
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('4','Sega Genesis')								
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('1','PlayStation')								
@@ -74,17 +87,17 @@ INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo 3DS')
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo Entertainment System')								
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo 64')								
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('6','Wonder Swan')			
-SET IDENTITY_INSERT dbo.Manufacturer ON;
 
-SET IDENTITY_INSERT dbo.ESRB_ID ON;
+
+
 INSERT ESRB(ESRB) VALUES ('E')
 INSERT ESRB(ESRB) VALUES ('E 10+')
 INSERT ESRB(ESRB) VALUES ('T')
 INSERT ESRB(ESRB) VALUES ('M')
 INSERT ESRB(ESRB) VALUES ('KA')
-SET IDENTITY_INSERT dbo.ESRB_ID OFF;
 
-SET IDENTITY_INSERT dbo.GenreID ON;
+
+
 INSERT Genre(GenreName) VALUES ('Role Playing Game')
 INSERT Genre(GenreName) VALUES ('Real Time Strategy')
 INSERT Genre(GenreName) VALUES ('Turn Based Strategy')
@@ -98,9 +111,9 @@ INSERT Genre(GenreName) VALUES ('Puzzle')
 INSERT Genre(GenreName) VALUES ('Sports')
 INSERT Genre(GenreName) VALUES ('Racing')
 INSERT Genre(GenreName) VALUES ('Fighting')
-SET IDENTITY_INSERT dbo.GenreID OFF;
 
-SET IDENTITY_INSERT dbo.GameID ON;
+
+
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy I',2,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy II',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy III',1,0,0)
@@ -151,9 +164,14 @@ INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Mario 64',1,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Last of Us',4,1,1)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Crazy Taxi',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Civilizations',2,1,1)
-SET IDENTITY_INSERT dbo.GameID OFF;
 
 
+select * from dbo.Console;
+select * from dbo.ESRB;
+select * from dbo.Games;
+select * from dbo.Genre;
+--select * from dbo.GamesGenre;
+select * from dbo.Manufacturer;
 --for testing and dropping tables
 /*
 DROP TABLE DBO.Console;
