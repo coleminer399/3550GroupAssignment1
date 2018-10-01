@@ -64,14 +64,17 @@ INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo 3DS')
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo Entertainment System')								
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo 64')								
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('6','Wonder Swan')			
+SET IDENTITY_INSERT dbo.Manufacturer ON;
 
-
+SET IDENTITY_INSERT dbo.ESRBID ON;
 INSERT ESRB(ESRB) VALUES ('E')
 INSERT ESRB(ESRB) VALUES ('E 10+')
 INSERT ESRB(ESRB) VALUES ('T')
 INSERT ESRB(ESRB) VALUES ('M')
 INSERT ESRB(ESRB) VALUES ('KA')
+SET IDENTITY_INSERT dbo.ESRBID OFF;
 
+SET IDENTITY_INSERT dbo.GenreID ON;
 INSERT Genre(GenreName) VALUES ('Role Playing Game')
 INSERT Genre(GenreName) VALUES ('Real Time Strategy')
 INSERT Genre(GenreName) VALUES ('Turn Based Strategy')
@@ -85,8 +88,9 @@ INSERT Genre(GenreName) VALUES ('Puzzle')
 INSERT Genre(GenreName) VALUES ('Sports')
 INSERT Genre(GenreName) VALUES ('Racing')
 INSERT Genre(GenreName) VALUES ('Fighting')
+SET IDENTITY_INSERT dbo.GenreID OFF;
 
-
+SET IDENTITY_INSERT dbo.GameID ON;
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy I',2,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy II',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy III',1,0,0)
@@ -137,3 +141,25 @@ INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Mario 64',1,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Last of Us',4,1,1)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Crazy Taxi',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Civilizations',2,1,1)
+SET IDENTITY_INSERT dbo.GameID OFF;
+
+
+--for testing and dropping tables
+/*
+DROP TABLE DBO.Console;
+DROP TABLE DBO.Manufacturer;
+DROP TABLE DBO.Genre;
+DROP TABLE DBO.Games;
+DROP TABLE DBO.ESRB;
+
+select 
+	ci.consoleid, 
+	ci.consolename, 
+    mi.manufacturername 
+from dbo.console ci
+left join dbo.manufacturer mi on mi.MANUFACTURERID = CI.MANUFACTURERID
+
+
+
+select * from dbo.manufacturer
+*/
