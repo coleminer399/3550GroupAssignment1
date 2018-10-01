@@ -1,13 +1,13 @@
 CREATE TABLE Manufacturer (
     ManufacturerID int IDENTITY(1,10) PRIMARY KEY NOT NULL,
-    ManufacturerName varchar(255) NOT NULL,
+    ManufacturerName varchar(255) NOT NULL
 );
 
 CREATE TABLE Console (
  ConsoleID int IDENTITY (500,1) PRIMARY KEY NOT NULL,
  ManufacturerID int,
  ConsoleName varchar (255),
- FOREIGN KEY (ManufacturerID) REFERENCES Manufacturer (ManufacturerID),
+ FOREIGN KEY (ManufacturerID) REFERENCES Manufacturer (ManufacturerID)
 );
 
 
@@ -23,6 +23,7 @@ CREATE TABLE Genre(
 )
 
 
+
 CREATE TABLE Games(
  GameID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
  GameName varchar (255),
@@ -30,6 +31,15 @@ CREATE TABLE Games(
  Multiplayer bit NOT NULL,
  IsOnline bit NOT NULL,
  FOREIGN KEY (ESRB_ID) REFERENCES ESRB(ESRB_ID)
+)
+
+CREATE TABLE GamesGenre(
+ GameGenreID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+ GenreID int,
+ GameID int,
+FOREIGN KEY (GenreID) REFERENCES Genre (GenreID),
+FOREIGN KEY (GameID) REFERENCES Games (GameID),
+
 )
 
 SET IDENTITY_INSERT dbo.Manufacturer ON;
@@ -66,13 +76,13 @@ INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo 64')
 INSERT Console (ManufacturerID, ConsoleName) VALUES ('6','Wonder Swan')			
 SET IDENTITY_INSERT dbo.Manufacturer ON;
 
-SET IDENTITY_INSERT dbo.ESRBID ON;
+SET IDENTITY_INSERT dbo.ESRB_ID ON;
 INSERT ESRB(ESRB) VALUES ('E')
 INSERT ESRB(ESRB) VALUES ('E 10+')
 INSERT ESRB(ESRB) VALUES ('T')
 INSERT ESRB(ESRB) VALUES ('M')
 INSERT ESRB(ESRB) VALUES ('KA')
-SET IDENTITY_INSERT dbo.ESRBID OFF;
+SET IDENTITY_INSERT dbo.ESRB_ID OFF;
 
 SET IDENTITY_INSERT dbo.GenreID ON;
 INSERT Genre(GenreName) VALUES ('Role Playing Game')
@@ -151,6 +161,7 @@ DROP TABLE DBO.Manufacturer;
 DROP TABLE DBO.Genre;
 DROP TABLE DBO.Games;
 DROP TABLE DBO.ESRB;
+DROP TABLE DBO.GamesGenre;
 
 select 
 	ci.consoleid, 
