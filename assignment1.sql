@@ -13,7 +13,7 @@ CREATE TABLE Console (
 
 CREATE TABLE ESRB(
 	ESRB_ID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	ESRB char (4) NOT NULL
+	ESRB char (5) NOT NULL
 )
 
 
@@ -164,6 +164,10 @@ INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Mario 64',1,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Last of Us',4,1,1)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Crazy Taxi',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Civilizations',2,1,1)
+
+
+
+
 
 
 select * from dbo.Console;
