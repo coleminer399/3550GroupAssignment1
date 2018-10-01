@@ -109,7 +109,7 @@ INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy V',3
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy VI',2,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy VII',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy VIII',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final FantasyIX',3,0,0)
+INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy IX',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy X',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy XI',3,0,0)
 INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy XII',3,0,0)
