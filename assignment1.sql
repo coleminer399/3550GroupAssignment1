@@ -38,19 +38,17 @@ CREATE TABLE GamesGenre(
 	GenreID int,
 	GameID int,
 	FOREIGN KEY (GenreID) REFERENCES Genre (GenreID),
-	FOREIGN KEY (GameID) REFERENCES Games (GameID),
+	FOREIGN KEY (GameID) REFERENCES Games (GameID)
 )
 
 CREATE TABLE GameCatalogue(
 	CatalogueID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	GameID int,
 	ConsoleID int,
-	ESRB_ID int,
 	PurchaseDate date NOT NULL,
 	Collectable bit DEFAULT 0,
 	FOREIGN KEY (GameID) REFERENCES Games(GameID),
-	FOREIGN KEY (ConsoleID) REFERENCES Console(ConsoleID),
-	FOREIGN KEY (ESRB_ID) REFERENCES ESRB(ESRB_ID)
+	FOREIGN KEY (ConsoleID) REFERENCES Console(ConsoleID)
 )
 
 SET IDENTITY_INSERT dbo.Manufacturer ON;
