@@ -13,7 +13,7 @@ CREATE TABLE Console (
 
 CREATE TABLE ESRB(
 	ESRB_ID int IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	ESRB char (5) NOT NULL
+	ESRB_Name char (5) NOT NULL
 )
 
 
@@ -60,39 +60,41 @@ INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('5','Atari')
 INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('6','Bandai')
 SET IDENTITY_INSERT dbo.Manufacturer OFF;
 
+SET IDENTITY_INSERT dbo.Console ON;
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('500','4','Sega Genesis')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('501','1','PlayStation ')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('502','1','PlayStation 1')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('503','1','PlayStation 2')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('504','1','PlayStation 3')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('505','1','PlayStation 4')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('506','3','Xbox')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('507','3','Xbox 360')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('508','3','Xbox One')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('509','5','Atari 2600')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('510','5','Atari Lynx')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('511','5','Atari 5200')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('512','2','Game Cube')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('513','2','Wii')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('514','2','Wii U')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('515','2','Game Boy')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('516','2','Game Boy Color')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('517','1','PlayStation Vita')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('518','2','Super Nintendo')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('519','2','Nintendo DS')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('520','2','Nintendo 3DS')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('521','2','Nintendo Entertainment System')
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('522','2','Nintendo 64')
+INSERT Console (ConsoleID,ManufacturerID, ConsoleName) VALUES ('523','6','Wonder Swan')
+SET IDENTITY_INSERT dbo.Console OFF;
 
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('4','Sega Genesis')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('1','PlayStation')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('1','PlayStation 1')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('1','PlayStation 2')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('1','PlayStation 3')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('1','PlayStation 4')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('3','Xbox')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('3','Xbox 360')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('3','Xbox One')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('5','Atari 2600')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('5','Atari Lynx')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('5','Atari 5200')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Game Cube')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Wii')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Wii U')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Game Boy')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Game Boy Color')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('1','PlayStation Vita')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Super Nintendo')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo DS')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo 3DS')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo Entertainment System')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('2','Nintendo 64')								
-INSERT Console (ManufacturerID, ConsoleName) VALUES ('6','Wonder Swan')			
 
-
-
-INSERT ESRB(ESRB) VALUES ('E')
-INSERT ESRB(ESRB) VALUES ('E 10+')
-INSERT ESRB(ESRB) VALUES ('T')
-INSERT ESRB(ESRB) VALUES ('M')
-INSERT ESRB(ESRB) VALUES ('KA')
+SET IDENTITY_INSERT dbo.ESRB ON;
+INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('1','E')
+INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('2','E 10+')
+INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('3','T')
+INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('4','M')
+INSERT ESRB(ESRB_ID, ESRB_NAME) VALUES ('5','KA')
+SET IDENTITY_INSERT dbo.ESRB OFF;
 
 
 
