@@ -288,11 +288,11 @@ SET IDENTITY_INSERT dbo.GameCatalogue OFF;
 /*
 DROP TABLE DBO.Console;
 DROP TABLE DBO.Manufacturer;
-DROP TABLE DBO.Genre;
-DROP TABLE DBO.GameCatalogue;
 DROP TABLE DBO.Games;
+DROP TABLE DBO.Genre;
 DROP TABLE DBO.ESRB;
 DROP TABLE DBO.GamesGenre;
+DROP TABLE DBO.GameCatalogue;
 
 DELETE DBO.Console;
 DELETE DBO.Manufacturer;
