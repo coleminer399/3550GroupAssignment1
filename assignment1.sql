@@ -113,7 +113,7 @@ INSERT Genre (GenreID, GenreName) VALUES ('12','Racing')
 INSERT Genre (GenreID, GenreName) VALUES ('13','Fighting')
 SET IDENTITY_INSERT dbo.Genre OFF;
 
-<<<<<<< HEAD
+
 SET IDENTITY_INSERT dbo.Games ON;
 INSERT Games (GameID, GameName, ESRB_ID, Multiplayer,IsOnline) VALUES ('1','Final Fantasy I','2','0','0')
 INSERT Games (GameID, GameName, ESRB_ID, Multiplayer,IsOnline) VALUES ('2','Final Fantasy II','3','0','0')
@@ -220,128 +220,65 @@ INSERT GamesGenre (GenreID, GameID) VALUES ('1','48')
 INSERT GamesGenre (GenreID, GameID) VALUES ('12','49')
 INSERT GamesGenre (GenreID, GameID) VALUES ('3','50')
 
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('1','1','518','41765','1')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('2','2','523','37882','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('3','3','521','42131','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('4','4','523','41798','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('5','5','501','43346','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('6','6','518','42006','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('7','7','501','42159','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('8','8','501','41797','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('9','9','502','43358','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('10','10','503','43176','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('11','11','507','43176','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('12','12','504','42744','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('13','13','NULL','43110','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('14','14','505','76079','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('15','15','511','36164','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('16','16','512','37747','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('17','17','NULL','37462','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('18','18','NULL','41441','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('19','19','NULL','40435','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('20','20','507','41979','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('21','21','507','41704','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('22','22','507','41586','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('23','23','507','42364','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('24','24','508','42420','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('25','25','508','41808','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('26','26','508','43353','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('27','27','519','39151','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('28','28','508','43110','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('29','29','522','36287','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('30','30','513','41303','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('31','31','507','42005','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('32','32','NULL','43321','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('33','33','NULL','42159','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('34','34','506','42257','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('35','35','507','42354','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('36','36','508','42376','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('37','37','508','43132','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('38','38','505','43162','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('39','39','505','43194','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('40','40','513','43108','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('41','41','500','36594','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('42','42','521','36315','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('43','43','522','36130','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('44','44','522','36168','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('45','45','516','35590','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('46','46','522','36680','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('47','47','522','41372','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('48','48','504','43321','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('49','49','506','42433','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('50','50','509','41648','')
+SET IDENTITY_INSERT dbo.GameCatalogue ON;
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('1','1','518','9/18/2003','1')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('2','2','523','9/18/2003','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('3','3','521','5/7/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('4','4','523','6/8/2014','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('5','5','501','9/3/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('6','6','518','1/2/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('7','7','501','6/4/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('8','8','501','6/7/2014','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('9','9','502','9/15/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('10','10','503','3/17/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('11','11','507','3/17/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('12','12','504','1/9/2017','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('13','13','NULL','1/10/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('14','14','505','4/17/2108','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('15','15','511','1/4/1999','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('16','16','512','5/6/2003','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('17','17','NULL','7/25/2002','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('18','18','NULL','6/16/2013','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('19','19','NULL','9/14/2010','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('20','20','507','12/6/2014','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('21','21','507','3/6/2014','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('22','22','507','11/8/2013','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('23','23','507','12/26/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('24','24','508','2/20/2016','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('25','25','508','6/18/2014','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('26','26','508','9/10/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('27','27','519','3/10/2007','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('28','28','508','1/10/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('29','29','522','5/7/1999','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('30','30','513','1/29/2013','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('31','31','507','1/1/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('32','32','NULL','8/9/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('33','33','NULL','6/4/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('34','34','506','9/10/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('35','35','507','12/16/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('36','36','508','1/7/2016','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('37','37','508','2/1/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('38','38','505','3/3/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('39','39','505','4/4/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('40','40','513','1/8/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('41','41','500','3/9/2000','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('42','42','521','6/4/1999','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('43','43','522','12/1/1998','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('44','44','522','1/8/1999','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('45','45','516','6/9/1997','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('46','46','522','6/3/2000','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('47','47','522','4/8/2013','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('48','48','504','8/9/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('49','49','506','3/4/2016','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('50','50','509','1/9/2014','')
+
+
+SET IDENTITY_INSERT dbo.GameCatalogue OFF;
 
 
 
 
-/* Question 1 Bring back all of the consoles */
-=======
-INSERT Genre(GenreName) VALUES ('Role Playing Game')
-INSERT Genre(GenreName) VALUES ('Real Time Strategy')
-INSERT Genre(GenreName) VALUES ('Turn Based Strategy')
-INSERT Genre(GenreName) VALUES ('First Person Shooter')
-INSERT Genre(GenreName) VALUES ('Exploration')
-INSERT Genre(GenreName) VALUES ('Sandbox')
-INSERT Genre(GenreName) VALUES ('Platformer')
-INSERT Genre(GenreName) VALUES ('Music')
-INSERT Genre(GenreName) VALUES ('Third Person Shooter')
-INSERT Genre(GenreName) VALUES ('Puzzle')
-INSERT Genre(GenreName) VALUES ('Sports')
-INSERT Genre(GenreName) VALUES ('Racing')
-INSERT Genre(GenreName) VALUES ('Fighting')
 
-
-
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy I',2,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy II',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy III',1,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy IV',2,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy V',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy VI',2,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy VII',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy VIII',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy IX',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy X',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy XI',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy XII',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy XIV',3,0,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Final Fantasy XV',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Missile Command',1,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Crash Bandicoot',5,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Star Wars Battlefront',3,1,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo: Combat Evolved',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo 2',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo 3',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo 3: ODST',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo Reach',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo 4',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo 5: Guardians',3,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo Wars',3,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Halo Wars 2',3,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Guitar Hero: On Tour',2,1,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Monster Hunter World',3,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Mario Kart 64',1,1,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Mario Kart Wii',1,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Left 4 Dead',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls: Arena',4,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls II: Daggerfall',4,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls III: Marrowind',4,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls IV: Oblivion',4,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls V: Skyrim',4,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Elder Scrolls Online',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Destiny',3,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Destiny 2',3,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Super Smash Bros. Brawl',3,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Sonic The Hedgehog',1,1,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Legend of Zelda',1,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Legend of Zelda: Ocarina of Time',1,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Legend of Zelda: Majoras Mask',1,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Legend of Zelda Links Awakening',1,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Donkey Kong 64',1,1,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Mario 64',1,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Last of Us',4,1,1)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Crazy Taxi',3,0,0)
-INSERT Games(GameName, ESRB_ID,Multiplayer,IsOnline) VALUES ('Civilizations',2,1,1)
 
 
 
@@ -359,9 +296,20 @@ select * from dbo.Manufacturer;
 DROP TABLE DBO.Console;
 DROP TABLE DBO.Manufacturer;
 DROP TABLE DBO.Genre;
+DROP TABLE DBO.GameCatalogue;
 DROP TABLE DBO.Games;
 DROP TABLE DBO.ESRB;
 DROP TABLE DBO.GamesGenre;
+
+DELETE DBO.Console;
+DELETE DBO.Manufacturer;
+DELETE DBO.Genre;
+DELETE DBO.Games;
+DELETE DBO.ESRB;
+delete dbo.GameCatalogue;
+DELETE DBO.GamesGenre;
+
+
 
 select 
 	ci.consoleid, 
