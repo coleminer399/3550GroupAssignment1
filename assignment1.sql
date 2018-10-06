@@ -52,6 +52,7 @@ CREATE TABLE GameCatalogue(
 )
 
 SET IDENTITY_INSERT dbo.Manufacturer ON;
+INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('0','MULITPLE')
 INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('1','Sony')
 INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('2','Nintendo')
 INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('3','Microsoft')
@@ -61,6 +62,7 @@ INSERT Manufacturer (ManufacturerID, ManufacturerName) VALUES ('6','Bandai')
 SET IDENTITY_INSERT dbo.Manufacturer OFF;
 
 SET IDENTITY_INSERT dbo.Console ON;
+INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('0','0','PC')
 INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('500','4','Sega Genesis')
 INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('501','1','PlayStation ')
 INSERT Console (ConsoleID, ManufacturerID, ConsoleName) VALUES ('502','1','PlayStation 1')
@@ -233,13 +235,13 @@ INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VA
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('10','10','503','3/17/2018','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('11','11','507','3/17/2018','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('12','12','504','1/9/2017','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('13','13','NULL','1/10/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('13','13','0','1/10/2018','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('14','14','505','4/17/2108','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('15','15','511','1/4/1999','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('16','16','512','5/6/2003','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('17','17','NULL','7/25/2002','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('18','18','NULL','6/16/2013','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('19','19','NULL','9/14/2010','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('17','17','0','7/25/2002','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('18','18','0','6/16/2013','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('19','19','0','9/14/2010','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('20','20','507','12/6/2014','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('21','21','507','3/6/2014','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('22','22','507','11/8/2013','')
@@ -252,8 +254,8 @@ INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VA
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('29','29','522','5/7/1999','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('30','30','513','1/29/2013','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('31','31','507','1/1/2015','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('32','32','NULL','8/9/2018','')
-INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('33','33','NULL','6/4/2015','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('32','32','0','8/9/2018','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('33','33','0','6/4/2015','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('34','34','506','9/10/2015','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('35','35','507','12/16/2015','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('36','36','508','1/7/2016','')
@@ -270,6 +272,11 @@ INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VA
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('47','47','522','4/8/2013','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('48','48','504','8/9/2018','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('49','49','506','3/4/2016','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('53','49','506','3/4/2016','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('52','49','506','3/4/2016','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('51','49','506','3/4/2016','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('54','49','502','3/4/2016','')
+INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('55','49','502','3/4/2016','')
 INSERT GameCatalogue (CatalogueID,GameID,ConsoleID, PurchaseDate,Collectable) VALUES ('50','50','509','1/9/2014','')
 
 
@@ -278,28 +285,14 @@ SET IDENTITY_INSERT dbo.GameCatalogue OFF;
 
 
 
-
-
-
-
-
-
-
-select * from dbo.Console;
-select * from dbo.ESRB;
-select * from dbo.Games;
-select * from dbo.Genre;
---select * from dbo.GamesGenre;
-select * from dbo.Manufacturer;
---for testing and dropping tables
 /*
 DROP TABLE DBO.Console;
 DROP TABLE DBO.Manufacturer;
-DROP TABLE DBO.Genre;
-DROP TABLE DBO.GameCatalogue;
 DROP TABLE DBO.Games;
+DROP TABLE DBO.Genre;
 DROP TABLE DBO.ESRB;
 DROP TABLE DBO.GamesGenre;
+DROP TABLE DBO.GameCatalogue;
 
 DELETE DBO.Console;
 DELETE DBO.Manufacturer;
@@ -310,16 +303,4 @@ delete dbo.GameCatalogue;
 DELETE DBO.GamesGenre;
 
 
-
-select 
-	ci.consoleid, 
-	ci.consolename, 
-    mi.manufacturername 
-from dbo.console ci
-left join dbo.manufacturer mi on mi.MANUFACTURERID = CI.MANUFACTURERID
-
-
-
-select * from dbo.manufacturer
 */
->>>>>>> da1d5f35ba7f56192adf1af073ff465c350fe9f4
